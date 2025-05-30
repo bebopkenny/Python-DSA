@@ -16,3 +16,21 @@ For example, if a fitness influencer starts with 10 followers, then after 1 mont
 
 Use a geometric sequence formula that's slightly modified for this problem: total = a1 * r^n
 '''
+
+def get_follower_prediction(follower_count, influencer_type, num_months):
+    if influencer_type == "fitness":
+        total = follower_count * 4**num_months
+    elif influencer_type == "cosmetic":
+        total = follower_count * 3**num_months
+    elif influencer_type != "fitness" or "cosmetic":
+        total = follower_count * 2** num_months
+    return total
+
+# Or 
+def get_follower_prediction(follower_count, influencer_type, num_months):
+    match influencer_type:
+        case "fitness":
+            factor = 4
+        case "cosmetic":
+            factor = 3
+    return follower_count * (factor**num_months)
