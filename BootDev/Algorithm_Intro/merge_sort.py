@@ -79,7 +79,48 @@ def merge(first, second):
         j += 1
     return result
 
+'''
 
+📝 Problem:
 
+You’re given a list of Influencer objects, each with the following attributes:
 
+class Influencer:
+    def __init__(self, name, followers, engagement):
+        self.name = name                # string
+        self.followers = followers      # int
+        self.engagement = engagement    # float (percentage, e.g. 4.5)
+
+You must sort the influencers by a custom influence score, defined as:
+
+score = followers + (100 * engagement)
+
+✅ Requirements:
+
+    Use Merge Sort
+
+    Sort in descending order of score
+
+    Return a list of names (strings) in sorted order
+
+    Do not use Python’s built-in sorted() or .sort()
+
+    Do not mutate the original input list
+
+📥 Function Signature:
+
+def sort_influencers(influencers: List[Influencer]) -> List[str]:
+
+📌 Example:
+
+Input:
+[
+    Influencer("Alice", 10000, 4.2),     # Score = 10000 + 420 = 10420
+    Influencer("Bob", 8000, 6.0),        # Score = 8000 + 600 = 8600
+    Influencer("Charlie", 15000, 2.0)    # Score = 15000 + 200 = 15200
+]
+
+Output:
+["Charlie", "Alice", "Bob"]
+'''
 
