@@ -101,5 +101,21 @@ class LinkedList:
             return True
         
         def remove(self, index): 
+            if index < 0 or index > self.length:
+                return None
+            if index == 0:
+                remove = self.head
+                remove.next = self.head.next
+                self.head.next = None
+            temp = self.head
+            prev = self.head
+            for _ in range(index):
+                prev = temp
+                temp = temp.next
+            if index == self.length - 1:
+                prev.next = None
+            prev.next = temp.next.next
+
+
 
 
