@@ -35,4 +35,7 @@ class LinkedList:
             self.head = None
             self.tail = None
         return temp
+
+    def prepend(self, value):
+        
         
